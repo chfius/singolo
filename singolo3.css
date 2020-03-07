@@ -78,13 +78,14 @@ main {
   font-size: 18.5px;
   line-height: 1.6;
   font-family: "Lato Light";
-  color: #f0d8d9;;
+  color: #f0d8d9;
+  letter-spacing: -0.2px;
 }
 
 .form_and_cont_info {
   display: flex;
   height: 450px;
-  padding: 15px 40px 0 40px;
+  padding: 18px 40px 0 40px;
 }
 
 .form_container {
