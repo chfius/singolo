@@ -10,6 +10,76 @@ navMenu.addEventListener('click', (e) => {
   }
 });
 
+// Slider task
+
+const slide1 = document.querySelector(".slider_item1");
+const slide2 = document.querySelector(".slider_item2");
+const items = [slide1, slide2];
+let currentItem = 0;
+let isEnabled = true;
+
+function changeCurrentItem(n) {
+  currentItem = (n + items.length) % items.length;
+}
+
+function hideItem(direction) {
+  isEnabled = false;
+  items[currentItem].classList.add(direction);
+  items[currentItem].addEventListener("animationend", function() {
+    this.classList.remove("active", direction);
+  });
+}
+
+function showItem(direction) {
+  items[currentItem].classList.add("next", direction);
+  items[currentItem].addEventListener("animationend", function() {
+    this.classList.remove("next", direction);
+    this.classList.add("active");
+    isEnabled = true;
+  });
+}
+
+function nextItem(n) {
+  hideItem("to-left");
+  changeCurrentItem(n + 1);
+  showItem("from-right");
+}
+
+function previousItem(n) {
+  hideItem("to-right");
+  changeCurrentItem(n - 1);
+  showItem("from-left");
+}
+
+document.querySelector(".control.left").addEventListener("click", function() {
+  if (isEnabled) {
+    previousItem(currentItem);
+  }
+});
+
+document.querySelector(".control.right").addEventListener("click", function() {
+  if (isEnabled) {
+    nextItem(currentItem);
+  }
+});
+
+const blackPhoneVert = document.querySelector(".tel_vert");
+const blackPhoneGor = document.querySelector(".tel_gor");
+slide1.addEventListener("click", (e) => {
+  if (e.target.className === "tel_vert") {
+    blackPhoneVert.src =
+      blackPhoneVert.src.indexOf("phone-vertical-bl") !== -1
+        ? "./assets/img/phone-vertical.png"
+        : "./assets/img/phone-vertical-bl.png";
+  }
+  if (e.target.className === "tel_gor") {
+    blackPhoneGor.src =
+      blackPhoneGor.src.indexOf("phone-horizontal-bl") !== -1
+        ? "./assets/img/phone-horizontal.png"
+        : "./assets/img/phone-horizontal-bl.png";
+  }
+});
+
 // Portfolio task
 
 const portfolioImages = document.querySelector('.image_items');
