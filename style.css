@@ -806,12 +806,21 @@ textarea::placeholder {
 
 .modal_msg {
   position: fixed;
-  top: 20%;
+  top: 30%;
 
   max-width: 70%;
   padding: 30px 40px;
   overflow: hidden;
 
   background-color: white;
-  border-radius: 5px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  border: 1px solid black;
+}
+
+.close-btn {
+  position: absolute;
+  left: 43%;
+
+  width: 60px;
 }
