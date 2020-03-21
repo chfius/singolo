@@ -56,6 +56,10 @@ body {
 }
 
 header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -95,13 +99,13 @@ ul.menu_items {
 }
 
 li:hover {
-  color: red;
-  text-decoration: underline;
+  color: #f06c64;
+  text-decoration: none;
 
   cursor: pointer;
 }
 
-.menu_item-home {
+.menu_item-active {
   color: #f06c64;
 }
 
@@ -325,10 +329,9 @@ ul.portfolio_menu > li:hover {
   border-radius: 6px;
 }
 
-.menu_item_first {
-  color: #dedede !important;
-
-  border: 1px solid #c5c5c5;
+.menu_item_active {
+  color: red !important;
+  border: 1px solid red;
 }
 
 .image_items {
@@ -338,7 +341,7 @@ ul.portfolio_menu > li:hover {
   width: 940px;
   height: 600px;
   margin-top: 20px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .image_item {
@@ -643,4 +646,22 @@ textarea::placeholder {
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(255, 253, 253, 0.5);
   cursor: pointer;
+}
+
+/* menu-navigation */
+.link_menu {
+  color: inherit;
+  text-decoration: none;
+}
+
+#services,
+#portfolio,
+#about,
+#contact {
+  position: relative;
+  top: -50px;
+}
+
+.portfolio_img_active {
+  outline: 5px solid #f06c64;
 }

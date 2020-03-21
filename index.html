@@ -8,22 +8,26 @@
 </head>
 
 <body>
-  <header>
+  <header class="header_menu" id="home">
     <h1 class="header_logo">singolo<span>*</span></h1>
     <nav class="nav_menu">
       <ul class="menu_items">
-        <li class="menu_item menu_item-home">home</li>
-        <li class="menu_item">
-          <div class="circle"></div>services
+        <li class="menu_item menu_item-active">
+          <a class="link_menu" href="#home">home</a>
         </li>
         <li class="menu_item">
-          <div class="circle"></div>portfolio
+          <div class="circle"></div>
+          <a class="link_menu" href="#services">services</a>
         </li>
         <li class="menu_item">
-          <div class="circle"></div>about
+          <div class="circle"></div>
+          <a class="link_menu" href="#portfolio">portfolio</a>
         </li>
         <li class="menu_item">
-          <div class="circle"></div>contact
+          <div class="circle"></div><a class="link_menu" href="#about">about</a>
+        </li>
+        <li class="menu_item">
+          <div class="circle"></div><a class="link_menu" href="#contact">contact</a>
         </li>
       </ul>
     </nav>
@@ -40,6 +44,7 @@
       </div>
     </section>
     <section class="service">
+      <a href="" id="services"></a>
       <div class="service_title_container">
         <p class="service_title">Our Services</p>
         <p class="service_title_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
@@ -102,6 +107,7 @@
   <!------------------ singolo2 ------------------------->
 
   <div class="portfolio">
+    <a href="" id="portfolio"></a>
     <div class="portfolio_block">
       <div class="portfolio_title">
         <p class="portfolio_title_logo">Portfolio</p>
@@ -110,7 +116,7 @@
       </div>
       <div class="portfolio_menu_block">
         <ul class="portfolio_menu">
-          <li class="menu_item2 menu_item_first">All</li>
+          <li class="menu_item2">All</li>
           <li class="menu_item2">Web Design</li>
           <li class="menu_item2">Graphic Design</li>
           <li class="menu_item2">Artwork</li>
@@ -119,40 +125,40 @@
       <div class="portfolio_images_block">
         <div class="image_items">
           <div class="image_item">
-            <img src="assets/img/11.jpg" alt="pic11">
+            <img class="portfolio_img" src="assets/img/11.jpg" alt="pic11">
           </div>
           <div class="image_item">
-            <img src="assets/img/12.jpg" alt="pic12">
+            <img class="portfolio_img" src="assets/img/12.jpg" alt="pic12">
           </div>
           <div class="image_item">
-            <img src="assets/img/13.jpg" alt="pic13">
+            <img class="portfolio_img" src="assets/img/13.jpg" alt="pic13">
           </div>
           <div class="image_item">
-            <img src="assets/img/14.jpg" alt="pic14">
+            <img class="portfolio_img" src="assets/img/14.jpg" alt="pic14">
           </div>
           <div class="image_item">
-            <img src="assets/img/21.jpg" alt="pic21">
+            <img class="portfolio_img" src="assets/img/21.jpg" alt="pic21">
           </div>
           <div class="image_item">
-            <img src="assets/img/22.jpg" alt="pic22">
+            <img class="portfolio_img" src="assets/img/22.jpg" alt="pic22">
           </div>
           <div class="image_item">
-            <img src="assets/img/23.jpg" alt="pic23">
+            <img class="portfolio_img" src="assets/img/23.jpg" alt="pic23">
           </div>
           <div class="image_item">
-            <img src="assets/img/24.jpg" alt="pic24">
+            <img class="portfolio_img" src="assets/img/24.jpg" alt="pic24">
           </div>
           <div class="image_item">
-            <img src="assets/img/31.jpg" alt="pic31">
+            <img class="portfolio_img" src="assets/img/31.jpg" alt="pic31">
           </div>
           <div class="image_item">
-            <img src="assets/img/32.jpg" alt="pic32">
+            <img class="portfolio_img" src="assets/img/32.jpg" alt="pic32">
           </div>
           <div class="image_item">
-            <img src="assets/img/33.jpg" alt="pic33">
+            <img class="portfolio_img" src="assets/img/33.jpg" alt="pic33">
           </div>
           <div class="image_item">
-            <img src="assets/img/34.jpg" alt="pic34">
+            <img class="portfolio_img" src="assets/img/34.jpg" alt="pic34">
           </div>
         </div>
       </div>
@@ -162,6 +168,7 @@
 
   <!--begin "about us" -->
   <div class="about">
+    <a href="" id="about"></a>
     <div class="about_block">
       <div class="about_title">
         <p class="about_title_logo">About Us</p>
@@ -229,6 +236,7 @@
 
 
   <div class="container3 main">
+    <a href="" id="contact"></a>
     <div class="title">
       <h1>Get a Quote</h1>
     </div>
@@ -296,7 +304,7 @@
       </div>
     </div>
   </footer>
-
+  <script src="script.js"></script>
 </body>
 
 </html>
