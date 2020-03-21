@@ -1,4 +1,4 @@
-// Navigation
+// Navigation task
 const navMenu = document.querySelector(".menu_items");
 navMenu.addEventListener('click', (e) => {
   if (e.target.parentElement.className === "menu_item") {
@@ -10,7 +10,7 @@ navMenu.addEventListener('click', (e) => {
   }
 });
 
-// Portfolio
+// Portfolio task
 
 const portfolioImages = document.querySelector('.image_items');
 portfolioImages.addEventListener('click', (e) => {
@@ -55,3 +55,33 @@ portfolioMenu.addEventListener('click', (e) => {
     e.target.classList.add("menu_item_active");
   }
 })
+
+// Form task
+
+const formContainer = document.querySelector(".form_fields");
+const modalWraper = document.querySelector(".modal_wraper");
+const submitButton = document.querySelector(".submit");
+const subjectForm = document.querySelector("#subject");
+const describeForm = document.querySelector("#describe");
+const modalMsg = document.querySelector(".modal_msg");
+submitButton.addEventListener("click", e => {
+  if (document.querySelector("#username").value && (document.querySelector("#email").value.indexOf('@')) + 1) {
+    e.preventDefault();
+    modalWraper.style.display = "flex";
+    modalMsg.insertAdjacentHTML("beforeend", `<p>The letter was sent</p>`);
+    let subjectValue = subjectForm.value || "No subject";
+    modalMsg.insertAdjacentHTML("beforeend", `<p>Subject: ${subjectValue}</p>`);
+    let describeField = describeForm.value || "No description";
+    modalMsg.insertAdjacentHTML(
+      "beforeend",
+      `<p>Description: ${describeField}</p><button class="close-btn" type="button">OK</button>`
+    );
+    const hidenModal = document.querySelector(".close-btn");
+    hidenModal.addEventListener("click", e => {
+      e.preventDefault();
+      modalWraper.style.display = "none";
+      formContainer.reset();
+      modalMsg.innerHTML = ``;
+    });
+  }
+});

@@ -8,6 +8,10 @@
 </head>
 
 <body>
+  <div class="modal_wraper">
+    <div class="modal_msg">
+    </div>
+  </div>
   <header class="header_menu" id="home">
     <h1 class="header_logo">singolo<span>*</span></h1>
     <nav class="nav_menu">
@@ -247,16 +251,17 @@
     </div>
     <div class="form_and_cont_info">
       <div class="form_container">
-        <form>
+        <form class="form_fields">
           <fieldset class="review_form">
             <div class="input_fields">
-              <input type="text" name="username" placeholder="Name (Required)" inputmode="text" pattern="^[a-zA-Z]+$"
+              <input type="text" name="username" placeholder="Name (Required)" inputmode="text" pattern="^[a-zA-Z]+$" id="username"
                 required>
-              <input type="email" name="email" placeholder="Email (Required)" inputmode="email" required>
-              <input type="text" name="subject" placeholder="Subject" inputmode="text">
-              <textarea name="describe_field" placeholder="Describe your project in detail..."></textarea>
+              <input type="email" name="email" placeholder="Email (Required)" inputmode="email" id="email" required>
+              <input type="text" name="subject" placeholder="Subject" inputmode="text" id="subject">
+              <textarea name="describe_field" placeholder="Describe your project in detail..." id="describe"></textarea>
             </div>
-            <input type="submit" name="submit" value="Submit" style="font-family: 'Lato Light'; font-size: 18px;">
+            <button class="submit" style="font-family: 'Lato Light'; font-size: 18px;">Submit</button>
+            <!-- <input class="submit" type="submit" name="submit" value="Submit" style="font-family: 'Lato Light'; font-size: 18px;"> -->
           </fieldset>
         </form>
       </div>

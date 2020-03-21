@@ -665,3 +665,24 @@ textarea::placeholder {
 .portfolio_img_active {
   outline: 5px solid #f06c64;
 }
+
+.modal_wraper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: none;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.modal_msg {
+  position: fixed;
+  top: 20%;
+  max-width: 70%;
+  padding: 30px 40px;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
