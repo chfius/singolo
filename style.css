@@ -391,7 +391,7 @@ span {
 /* ---------------- styles for part2 ------------------- */
 
 .portfolio {
-  width: 1020px;
+  max-width: 1020px;
   height: 865px;
   margin: 0 auto;
 
@@ -465,16 +465,25 @@ ul.portfolio_menu > li:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 940px;
-  height: 600px;
+  width: 100%;
+  height: 100%;
   margin-top: 20px;
-  /* overflow: hidden; */
+  /* overflow: hidden;*/
 }
 
 .image_item {
-  width: 220px;
+  /* width: 220px;
+  min-width: 100px;
   height: 187px;
+  height: auto;
+  margin-bottom: 20px; */
+
+  width: 220px;
   margin-bottom: 20px;
+  margin: 10px;
+  flex: 1 0 20%;
+  min-width: 100px;
+  height: auto;
 }
 
 .image_item img {
@@ -485,7 +494,7 @@ ul.portfolio_menu > li:hover {
 }
 
 .about {
-  width: 1020px;
+  max-width: 1020px;
   height: 865px;
   height: 725px;
   margin: 0 auto;
@@ -527,16 +536,16 @@ span.about_title_text {
 
 .about_item {
   width: 300px;
+  margin: 0px 0.5%;
 }
 
 .item_photo {
-  width: 300px;
-  height: 300px;
-
-  background-size: cover;
+  min-width: 215px;
+  width: 100%;
+  height: auto;
 }
 
-.photo1 {
+/* .photo1 {
   background-image: url("assets/img/photo1.jpg");
 }
 
@@ -546,7 +555,7 @@ span.about_title_text {
 
 .photo3 {
   background-image: url("assets/img/photo3.jpg");
-}
+} */
 
 .item_text p {
   padding-top: 16px;
@@ -585,7 +594,7 @@ span.about_title_text {
 /* ---------------- styles for part3 ------------------- */
 
 .container3 {
-  width: 1020px;
+  max-width: 1020px;
   margin: 0 auto; /* отцентрировать блок по центру страницы */
 }
 
@@ -813,9 +822,9 @@ textarea::placeholder {
   overflow: hidden;
 
   background-color: white;
+  border: 1px solid black;
   border-radius: 30px;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  border: 1px solid black;
 }
 
 .close-btn {
@@ -823,4 +832,49 @@ textarea::placeholder {
   left: 43%;
 
   width: 60px;
+}
+
+/* ----------------responsive < 1020px----------------------- */
+
+@media (max-width: 1019px) {
+  header {
+    width: 100%;
+  }
+
+  .tel_vert {
+    width: 163px;
+  }
+
+  .tel_gor {
+    width: 345px;
+    padding-bottom: 62px;
+  }
+
+  .slider_item2 img {
+    width: 50%;
+    max-width: 517px;
+    height: auto;
+  }
+  .service {
+    height: 100%;
+  }
+  .service_texts {
+    justify-content: space-around;
+  }
+  .service_items {
+    width: 50%;
+    max-width: 308px;
+  }
+  .image_item {
+    flex-basis: 26%;
+  }
+  .portfolio {
+    height: 100%;
+  }
+  .form_section {
+    padding: 6% 2%;
+
+    background-color: #f06c64;
+    border-bottom: 6px solid #ea676b;
+  }
 }
